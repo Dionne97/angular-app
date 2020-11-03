@@ -1,0 +1,27 @@
+<h1 mat-dialog-title>Add Office</h1>
+<div mat-dialog-content>
+  <mat-form-field>
+    <mat-label>Office Name</mat-label>
+    <input matInput [(ngModel)]="data.office_name">
+  </mat-form-field>
+  <mat-form-field>
+    <mat-label>Email Address</mat-label>
+    <input matInput [(ngModel)]="data.email">
+  </mat-form-field>
+  <mat-form-field>
+    <mat-label>Office Tel</mat-label>
+    <input matInput [(ngModel)]="data.tel">
+  </mat-form-field>
+  <mat-form-field>
+  <mat-label>Address</mat-label>
+    <input matInput [(ngModel)]="data.address">
+  </mat-form-field>
+  <mat-form-field>
+    <mat-label>Number of Applicants</mat-label>
+    <input matInput [(ngModel)]="data.num_of_applicants">
+  </mat-form-field>
+</div>
+<div mat-dialog-actions>
+  <button mat-button (click)="onNoClick()">No Thanks</button>
+  <button mat-button [mat-dialog-close]="data" cdkFocusInitial>Save Office</button>
+</div>
